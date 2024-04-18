@@ -1,5 +1,6 @@
 ﻿
 using ClinicaACME.Infra.Ioc.Context;
+using ClinicaACME.Infra.Ioc.FluentValidation;
 using ClinicaACME.Infra.Ioc.GlobalExceptions;
 using ClinicaACME.Infra.Ioc.Repository;
 using ClinicaACME.Infra.Ioc.UnityOfWorkDependecy;
@@ -17,6 +18,7 @@ namespace ClinicaACME.Infra.Ioc
             services.AddServiceRepository();
             services.AddServiceUnityOfWork();
             services.AddServiceGlobalExecptions();
+            services.AddServiceValidationDomains();
 
             return services;
         }
