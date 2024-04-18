@@ -9,7 +9,7 @@ namespace ClinicaACME.Infra.Data.Repository
     {
         private readonly ApplicationDbContext _dbContext;
 
-        public RepositoryPatient(ApplicationDbContext dbContext) : base(dbContext) { }
+        public RepositoryPatient(ApplicationDbContext dbContext) : base(dbContext){}
 
     }
 }

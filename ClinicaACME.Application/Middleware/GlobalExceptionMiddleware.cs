@@ -51,14 +51,14 @@ namespace ClinicaACME.Application.Middleware
                         }
                     }
 
-                    //if (ex is FluentValidation.ValidationException fluentException)
-                    //{
-                    //    errorResult.Exception = "Erro na requisição. Uma ou mais validações falharam.";
-                    //    foreach (var error in fluentException.Errors)
-                    //    {
-                    //        errorResult.Messages.Add($"[{error.PropertyName}] {error.ErrorMessage}");
-                    //    }
-                    //}
+                    if (ex is FluentValidation.ValidationException fluentException)
+                    {
+                        errorResult.Exception = "Erro na requisição. Uma ou mais validações falharam.";
+                        foreach (var error in fluentException.Errors)
+                        {
+                            errorResult.Messages.Add($"[{error.PropertyName}] {error.ErrorMessage}");
+                        }
+                    }
 
 
                     switch (ex)

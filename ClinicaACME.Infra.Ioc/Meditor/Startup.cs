@@ -1,6 +1,4 @@
-﻿
-
-using ClinicaACME.Application.Behaviors;
+﻿using ClinicaACME.Application.Behaviors;
 using ClinicaACME.Application.Commands.Request.Patient;
 using ClinicaACME.Application.Commands.Response.Patient;
 using ClinicaACME.Application.Handlers.PatientHandler;

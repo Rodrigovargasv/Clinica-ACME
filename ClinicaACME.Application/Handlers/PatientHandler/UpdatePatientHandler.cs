@@ -32,7 +32,7 @@ namespace ClinicaACME.Application.Handlers.PatientHandler
             if (!string.IsNullOrEmpty(request.Cpf))
                 guestId.Cpf = request.Cpf;
 
-            if (!string.IsNullOrEmpty(request.Gender.ToString()))
+            if (!string.IsNullOrEmpty(request.Gender))
                 guestId.Gender = request.Gender;
 
             if (!string.IsNullOrEmpty(request.Status.ToString()))
