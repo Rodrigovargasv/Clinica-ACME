@@ -1,6 +1,7 @@
 ﻿
 using ClinicaACME.Infra.Ioc.Context;
 using ClinicaACME.Infra.Ioc.Repository;
+using ClinicaACME.Infra.Ioc.UnityOfWorkDependecy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,6 +13,7 @@ namespace ClinicaACME.Infra.Ioc
         {
             services.AddServiceDBContext(configuration);
             services.AddServiceRepository();
+            services.AddServiceUnityOfWork();
 
             return services;
         }
