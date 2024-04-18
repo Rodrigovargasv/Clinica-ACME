@@ -1,7 +1,7 @@
 ﻿
 namespace ClinicaACME.Domain.Entities
 {
-    public class ErroResult
+    public class ErrorResult
     {
         public List<string> Messages { get; set; } = new();
         public string Message { get; set; }

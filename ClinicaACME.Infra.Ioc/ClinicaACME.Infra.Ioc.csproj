@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClinicaACME.Application\ClinicaACME.Application.csproj" />
     <ProjectReference Include="..\ClinicaACME.Domain\ClinicaACME.Domain.csproj" />
     <ProjectReference Include="..\ClinicaACME.Infra.Data\ClinicaACME.Infra.Data.csproj" />
   </ItemGroup>
