@@ -1,5 +1,6 @@
 ﻿
 using ClinicaACME.Domain.Entities;
+using ClinicaACME.Infra.Data.EntityConfiguration;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClinicaACME.Infra.Data.Context
@@ -8,12 +9,12 @@ namespace ClinicaACME.Infra.Data.Context
     {
         public ApplicationDbContext (DbContextOptions<ApplicationDbContext> dbContext) : base(dbContext) { }  
         
-        public DbSet<Patients> Patients { get; set; }
+        public DbSet<Patient> Patients { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.ApplyConfiguration(new Patients());
+            modelBuilder.ApplyConfiguration(new PatientConfiguration());
         }
     }
 }
