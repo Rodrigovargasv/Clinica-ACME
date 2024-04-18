@@ -35,6 +35,12 @@ namespace ClinicaACME.Infra.Data.Repository
                 .AsNoTracking()
                 .FirstOrDefaultAsync(e => EF.Property<string>(e, "Name") == name);
         }
+        public async Task<TEntity> GetById(int id)
+        {
+            return await _dbContext.Set<TEntity>()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => EF.Property<int>(e, "id") == id);
+        }
 
         public void Update(TEntity entity)
         {

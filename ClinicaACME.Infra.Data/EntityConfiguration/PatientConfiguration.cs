@@ -12,6 +12,7 @@ namespace ClinicaACME.Infra.Data.EntityConfiguration
 
             builder.Property(x => x.Id).IsRequired().HasColumnName("id").ValueGeneratedOnAdd();
             builder.Property(x => x.Name).IsRequired().HasColumnName("nome").HasMaxLength(150);
+            builder.Property(x => x.BirthDate).IsRequired().HasColumnName("data_de_nascimento");
             builder.Property(x => x.Cpf).IsRequired().HasColumnName("cpf").HasMaxLength(11);
             builder.Property(x => x.Gender).IsRequired().HasColumnName("sexo");
             builder.Property(x => x.Adress).HasColumnName("endereco");
