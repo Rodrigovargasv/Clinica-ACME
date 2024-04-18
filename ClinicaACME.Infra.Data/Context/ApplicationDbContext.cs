@@ -1,0 +1,19 @@
+﻿
+using ClinicaACME.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace ClinicaACME.Infra.Data.Context
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext (DbContextOptions<ApplicationDbContext> dbContext) : base(dbContext) { }  
+        
+        public DbSet<Patients> Patients { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.ApplyConfiguration(new Patients());
+        }
+    }
+}
