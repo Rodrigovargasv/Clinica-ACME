@@ -1,4 +1,4 @@
-﻿using ClinicaACME.Domain.Entities.Commons;
+﻿using ClinicaACME.Domain.Commons;
 
 namespace ClinicaACME.Domain.Entities
 {

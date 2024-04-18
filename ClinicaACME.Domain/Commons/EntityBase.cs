@@ -1,5 +1,4 @@
-﻿
-namespace ClinicaACME.Domain.Entities.Commons
+﻿namespace ClinicaACME.Domain.Commons
 {
     public abstract class EntityBase
     {
