@@ -24,8 +24,4 @@
     <ProjectReference Include="..\ClinicaACME.Domain\ClinicaACME.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UnityOFWork\" />
-  </ItemGroup>
-
 </Project>
