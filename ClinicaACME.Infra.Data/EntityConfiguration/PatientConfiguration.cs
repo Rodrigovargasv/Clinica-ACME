@@ -17,6 +17,9 @@ namespace ClinicaACME.Infra.Data.EntityConfiguration
             builder.Property(x => x.Adress).HasColumnName("endereco");
             builder.Property(x => x.Status).IsRequired().HasColumnName("status").HasDefaultValue(true);
 
+            // Adiciona index unico para o campo CPF.
+            builder.HasIndex(x => x.Cpf).IsUnique();
+
         }
     }
 }
