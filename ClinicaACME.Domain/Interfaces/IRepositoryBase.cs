@@ -1,7 +1,7 @@
 ﻿
 namespace ClinicaACME.Domain.Interfaces
 {
-    public interface IRespositoryBase<TEntity>
+    public interface IRepositoryBase<TEntity>
     {
         Task Create(TEntity entity);
         void Update(TEntity entity);

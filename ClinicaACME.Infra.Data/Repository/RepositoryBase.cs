@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ClinicaACME.Infra.Data.Repository
 {
-    public class RepositoryBase<TEntity> : IRespositoryBase<TEntity> where TEntity : class
+    public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
         private readonly ApplicationDbContext _dbContext;
 
