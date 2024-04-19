@@ -3,7 +3,7 @@ using ClinicaACME.Domain.Commons;
 
 namespace ClinicaACME.Application.Commands.Response.Patient
 {
-    public class GetPatientByNameResponse : EntityBase
+    public class GetPatientByIdResponse : EntityBase
     {
         public string Name { get; set; }
         public DateTime BirthDate { get; set; }

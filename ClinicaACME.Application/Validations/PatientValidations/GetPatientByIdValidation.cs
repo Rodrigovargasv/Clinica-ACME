@@ -9,20 +9,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ClinicaACME.Application.Validations.PatientValidations
 {
-    public class GetPatientByNameValidation : AbstractValidator<GetParientByNameRequest>
+    public class GetPatientByIdValidation : AbstractValidator<GetParientByIdRequest>
     {
         private readonly ApplicationDbContext _dbContext;
 
-        public GetPatientByNameValidation(ApplicationDbContext dbContext)
+        public GetPatientByIdValidation(ApplicationDbContext dbContext)
         {
 
             _dbContext = dbContext;
-            RuleFor(x => x.Name)
+            RuleFor(x => x.Id)
                .NotEmpty().WithMessage("O campo não pode ser vazio.")
                .NotNull().WithMessage("O campo não pode ser nulo.")
                .MustAsync(async (value, cancellationToken) =>
                {
-                   return await _dbContext.Set<Patient>().AnyAsync(x => x.Name == value) ? true : throw new NotFoundException("Paciente não encontrado.");
+                   return await _dbContext.Set<Patient>().AnyAsync(x => x.Id == value) ? true : throw new NotFoundException("Paciente não encontrado.");
                });
         }
     }

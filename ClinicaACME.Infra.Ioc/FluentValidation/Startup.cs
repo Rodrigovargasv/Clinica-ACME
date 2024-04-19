@@ -10,7 +10,7 @@ namespace ClinicaACME.Infra.Ioc.FluentValidation
         {
             services.AddValidatorsFromAssemblyContaining<CreatePatientValidation>();
             services.AddValidatorsFromAssemblyContaining<UpdatePatientValidation>();
-            services.AddValidatorsFromAssemblyContaining<GetPatientByNameValidation>();
+            services.AddValidatorsFromAssemblyContaining<GetPatientByIdValidation>();
             services.AddValidatorsFromAssemblyContaining<DeletePatientValidation>();
 
             return services;

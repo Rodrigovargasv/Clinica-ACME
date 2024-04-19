@@ -15,8 +15,8 @@ namespace ClinicaACME.Infra.Ioc.Meditor
 
             services.AddScoped<IRequestHandler<CreatePatientRequest, CreatePatientResponse>, CreatePatientHandler>();
             services.AddScoped<IRequestHandler<UpdatePatientRequest, UpdatePatientResponse>, UpdatePatientHandler>();
-            //services.AddScoped<IRequestHandler<, IEnumerable<>>, >();
-            services.AddScoped<IRequestHandler<GetParientByNameRequest, GetPatientByNameResponse>, GetPatientByNameHandler>();
+            services.AddScoped<IRequestHandler<GetAllPatientRequest, IEnumerable<GetAllPatientResponse>>, GetAllPatientHandler>();
+            services.AddScoped<IRequestHandler<GetParientByIdRequest, GetPatientByIdResponse>, GetPatientByIdHandler>();
             services.AddScoped<IRequestHandler<DeletePatientRequest, DeletePatientResponse>, DeletePatientHandler>();
 
 

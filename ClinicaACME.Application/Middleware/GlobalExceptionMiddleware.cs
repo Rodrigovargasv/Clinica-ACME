@@ -33,8 +33,6 @@ namespace ClinicaACME.Application.Middleware
             {
                 using (LogContext.PushProperty("ErrorId", Guid.NewGuid().ToString()))
                 {
-
-
                     ErrorResult errorResult = new()
                     {
                         Source = ex.TargetSite?.DeclaringType?.FullName,
