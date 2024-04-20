@@ -10,10 +10,10 @@ namespace ClinicaACME.Application.Commands.Request.Patient
         [JsonIgnore]
         public int Id { get; set; } 
         public string? Name { get; set; }
-        public DateTime? BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public string? Cpf { get; set; }
         public string Gender { get; set; }
-        public string? Adress { get; set; }
+        public string? Address { get; set; }
         public bool? Status { get; set; }
     }
 }

@@ -35,6 +35,8 @@ namespace ClinicaACME.Application.Handlers.PatientHandler
             if (!string.IsNullOrEmpty(request.Gender))
                 guestId.Gender = request.Gender;
 
+                guestId.Address = request.Address;
+
             if (!string.IsNullOrEmpty(request.Status.ToString()))
                 guestId.Status = request.Status;
 

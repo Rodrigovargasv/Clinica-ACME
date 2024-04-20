@@ -21,7 +21,7 @@ namespace ClinicaACME.Application.Validations.PatientValidations
                     if (!string.IsNullOrEmpty(value))
                     {
                         return await _dbContext.Set<Patient>()
-                            .AsNoTracking().AnyAsync(x => x.Name == value) ? true : throw new NotFoundException("Paciente(s) não encontrado");
+                            .AsNoTracking().AnyAsync(x => x.Name == value || x.Name.Contains(value)) ? true : throw new NotFoundException("Paciente(s) não encontrado");
                     }
                     return true;
                 });

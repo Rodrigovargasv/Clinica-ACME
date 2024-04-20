@@ -18,7 +18,7 @@ namespace ClinicaACME.Application.Handlers.PatientHandler
 
         public async Task<IEnumerable<GetAllPatientResponse>> Handle(GetAllPatientRequest request, CancellationToken cancellationToken)
         {
-            var patients = await _patientRepository.GetAll(request.Page, request.PageSize, request.Name);
+            var patients = await _patientRepository.GetAll(request.Name);
 
             return patients.Adapt<IEnumerable<GetAllPatientResponse>>();
         }

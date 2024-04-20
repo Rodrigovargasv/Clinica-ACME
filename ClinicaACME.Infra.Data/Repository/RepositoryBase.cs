@@ -24,21 +24,18 @@ namespace ClinicaACME.Infra.Data.Repository
             _dbContext.Set<TEntity>().Remove(entity);
         }
 
-        public async Task<IEnumerable<TEntity>> GetAll(int page, int pageSize, string name)
+        public async Task<IEnumerable<TEntity>> GetAll(string name)
         {
             if (!string.IsNullOrEmpty(name))
             {
                 return await _dbContext.Set<TEntity>()
                     .AsNoTracking()
-                    .Skip((page - 1) * pageSize)
-                    .Take(pageSize)
-                    .Where(e => EF.Property<string>(e, "Name") == name)
+                    .Where(e => EF.Property<string>(e, "Name") == name || EF.Property<string>(e, "Name").Contains(name))
                     .ToListAsync();
             }
 
             return await _dbContext.Set<TEntity>().AsNoTracking()
-                    .Skip((page - 1) * pageSize)
-                    .Take(pageSize)
+             
                     .ToListAsync();
         }
         public async Task<TEntity> GetById(int id)

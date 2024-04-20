@@ -5,7 +5,7 @@ namespace ClinicaACME.Domain.Interfaces
     {
         Task Create(TEntity entity);
         void Update(TEntity entity);
-        Task<IEnumerable<TEntity>> GetAll(int page, int pageSize, string name);
+        Task<IEnumerable<TEntity>> GetAll(string name);
         Task<TEntity> GetById(int id);
         void Delete(TEntity entity);
     }

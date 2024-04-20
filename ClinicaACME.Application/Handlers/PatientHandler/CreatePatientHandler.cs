@@ -21,7 +21,7 @@ namespace ClinicaACME.Application.Handlers.PatientHandler
         public async Task<CreatePatientResponse> Handle(CreatePatientRequest request, CancellationToken cancellationToken)
         {
             var patient = request.Adapt<Patient>();
-
+            patient.BirthDate = DateTime.Parse(patient.BirthDate.ToString("dd/MM/yyyy"));
             await _patientRepository.Create(patient);
             await _uow.Commit();
 

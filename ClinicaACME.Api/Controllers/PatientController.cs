@@ -32,12 +32,10 @@ namespace ClinicaACME.Api.Controllers
         }
 
         [HttpGet("GetAllPatient")]
-        public async Task<IEnumerable<GetAllPatientResponse>> GetAllPatient(int page, int pageSize , string name)
+        public async Task<IEnumerable<GetAllPatientResponse>> GetAllPatient(string name)
         {
             return await _mediator.Send(new GetAllPatientRequest()
             {
-                Page = page <= 0 ? 1 : page,
-                PageSize = pageSize <= 0 ? 10 : pageSize,
                 Name = name
             });
         }
